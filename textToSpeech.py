@@ -1,5 +1,8 @@
 import PySimpleGUI as sg
 import pyttsx3
+#NAME: FELIX AZAGLO
+# ID :10951571
+#COMPUTER ENGINEERIN
 
 layout = [[sg.Text('Enter Text to be spoken: '), sg.Input(key='-INPUT-')],
           [sg.Column([[sg.Radio('Male Voice', 'voice', key='-MALE-', default=True), sg.Radio('Female Voice', 'voice', key='-FEMALE-')]], element_justification='c')],
