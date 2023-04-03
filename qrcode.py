@@ -4,12 +4,17 @@ import os
 #AZAGLO FELIX YAW
 #10951571
 #COMPUTER ENGINEERING
+
+
+
 def generate_qr_code(text):
     qr_code = qr.QRCode(version=1, box_size=10, border=4)
     qr_code.add_data(text)
     qr_code.make(fit=True)
     qr_img = qr_code.make_image(fill_color="yellow", back_color="green")
     return qr_img
+
+
 
 def main():
     psg.theme("DarkAmber")
