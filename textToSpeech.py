@@ -2,14 +2,19 @@ import PySimpleGUI as sg
 import pyttsx3
 #NAME: FELIX AZAGLO
 # ID :10951571
-#COMPUTER ENGINEERIN
+#COMPUTER ENGINEERING
+
+
 
 layout = [[sg.Text('Enter Text to be spoken: '), sg.Input(key='-INPUT-')],
           [sg.Column([[sg.Radio('Male Voice', 'voice', key='-MALE-', default=True), sg.Radio('Female Voice', 'voice', key='-FEMALE-')]], element_justification='c')],
           [sg.Button('Speak'), sg.Button('Exit')]]
 
+
+
 window = sg.Window('Text to Speech App', layout)
 engine = pyttsx3.init()
+
 
 def say_text(text, voice_type):
     voices = engine.getProperty('voices')
@@ -31,4 +36,5 @@ while True:
         else:
             say_text(text, 'female')
 
+                    
 window.close()
